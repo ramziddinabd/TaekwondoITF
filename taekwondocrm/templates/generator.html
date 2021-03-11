@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Generator</title>
+    <link rel="stylesheet" href="register_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Musobaqa qur'asi</div>
+    <div class="content">
+      <form action="#">
+
+        <div class="input-box">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <span class="details">Gender</span>
+            <div class="category">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="radio" name="gender" id="dot-3">
+            <input type="radio" name="gender" id="dot-4">
+            <span class="details">Mashg'ulot</span>
+            <div class="category">
+                <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Sparring</span>
+                </label>
+                <label for="dot-4">
+                    <span class="dot four"></span>
+                    <span class="gender">Komplex</span>
+                </label>
+            </div>
+        </div>
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Tug'ilgan sana  ..dan</span>
+                <input type="date" placeholder="Tug'ilgan sana" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Tug'ilgan sana  ..gacha</span>
+                <input type="date" placeholder="Tug'ilgan sana" required>
+            </div>
+            
+            <div class="input-box">
+                <span class="details">Vazn kategoriasi</span>
+                <select id="weight_category" name="weight_category">
+                    <option value="unselected">Tanlanmagan</option>
+                    <option value="50-55">  50-55 kilogram </option>
+                    <option value="56-59">  56-59 kilogram </option>
+                    <option value="60-67">  60-67 kilogram </option>
+                    <option value="68-74">  68-74 kilogram </option>
+                    <option value="75+">  75+ kilogram </option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="details">Belbog' kategoriyasi</span>
+                <select id="rang_category" name="rang_category">
+                    <option value="unselected">Tanlanmagan</option>
+                    <option value="white">Oq</option>
+                    <option value="yellow">Sariq</option>
+                    <option value="green">Yashil</option>
+                    <option value="blue">Ko'k</option>
+                    <option value="red">Qizil</option>
+                    <option value="black1">Qora 1-dan</option>
+                <option value="black2">Qora 2-dan</option>
+            </select>
+          </div>
+        </div>
+
+        
+        <div class="button">
+          <input type="submit" value="Tasdiqlash">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
