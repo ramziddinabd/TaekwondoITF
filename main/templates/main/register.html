@@ -1,0 +1,50 @@
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Participant registration</title>
+    <link rel="stylesheet" href="static\css\register_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Ishtrokchini ro'yxatga olish</div>
+    <div class="content">
+      <form action="create_member" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            {% render_field form.full_name type="text" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Birth date</span>
+            {% render_field form.birth_date type="date" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            {% render_field form.gender type="dropdown" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Weight</span>
+            {% render_field form.weight type="number" %}<br>
+          </div>
+          <div class="input-box">
+            <span class="details">Level</span>
+            {% render_field form.level type="dropdown" %}<br>
+          </div>
+          <div class="input-box">
+            <span class="details">Team</span>
+            {% render_field form.team type="dropdown" %}<br>
+          </div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Participant registration</title>
+    <link rel="stylesheet" href="static\css\register_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Tournamenr generation</div>
+    <div class="content">
+      <form action="generate_tournament" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+              <span class="details">Min birth day</span>
+              {% render_field form.min_birth_date type="date" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Max birth day</span>
+            {% render_field form.max_birth_date type="date" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Min Weight</span>
+            {% render_field form.min_weight type="number" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Max Weight</span>
+            {% render_field form.max_weight type="number" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            {% render_field form.gender %}
+          </div>
+          <div class="input-box">
+            <span class="details">Level</span>
+            {% render_field form.level%}
+          </div>
+          <div class="input-box">
+            <span class="details">Team</span>
+            {% render_field form.match_type %}
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form> 
+    </div>
+  <div>
+</body>
+</html>

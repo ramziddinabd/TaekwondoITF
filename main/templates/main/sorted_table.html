@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participants</title>
+    <link rel="stylesheet" href="static\css\table_style.css" />
+  </head>
+  <body>
+    <div class="table-container">
+      <h2 class="table-heading">Participants</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>F.I.SH</th>
+            <th>Tug'ulgan sana</th>
+            <th>Jinsi</th>
+            <th>Vazn toifasi</th>
+            <th>Belbog' toifasi</th>
+            <th>Jamoa</th>
+            <th>Murabbiy</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in members %}
+          <tr>
+              <td data-heading="id">{{member.id}}</td>
+              <td data-heading="full_name">{{member.full_name}}</td>
+              <td data-heading="date_birth">{{member.birth_date}}</td>
+              <td data-heading="gender">{{member.gender}}</td>
+              <td data-heading="weight_category">{{member.weight}}</td>
+              <td data-heading="rang_category">{{member.level}}</td>
+              <td data-heading="team_name">{{member.team}}</td> 
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
